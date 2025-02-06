@@ -1,3 +1,5 @@
+[![](https://img.shields.io/badge/Contribute-Welcome-green)](./CONTRIBUTING.md)
+
 # Edge AI Engineering
 
 ![Edge AI Engineering](https://via.placeholder.com/1200x300?text=Edge+AI+Engineering)
