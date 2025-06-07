@@ -1,3 +1,5 @@
+[![](https://img.shields.io/badge/Contribute-Welcome-green)](./CONTRIBUTING.md)
+
 # Edge AI Engineering
 
 ![Edge AI Engineering](https://via.placeholder.com/1200x300?text=Edge+AI+Engineering)
@@ -82,7 +84,7 @@ A comprehensive guide to Edge AI Engineering, focusing on the deployment of AI m
 
 1. Clone this repository:
    ```
-   git clone https://github.com/yourusername/edge-ai-engineering.git
+   git clone https://github.com/afondiel/edge-ai-engineering.git
    ```
 2. Navigate to the topic you're interested in within the `docs` folder.
 3. Follow the guides and examples to deepen your understanding of Edge AI engineering.
