@@ -39,7 +39,7 @@ This guide provides core concepts and resources for anyone who want to gain core
 ### What is Edge AI?
 - Definition and core concepts: Processing AI workloads closer to the data source, minimizing reliance on centralized cloud infrastructure.
 - Comparison with cloud-based AI:
-    | Feature         | Edge AI                                  | Cloud AI                                   |
+    | **Feature**        | **Edge AI**                                  | **Cloud AI**                                   |
     |-----------------|------------------------------------------|--------------------------------------------|
     | Latency         | Ultra-low, real-time decisions           | Higher, dependent on network               |
     | Bandwidth       | Optimized, less data sent to cloud       | High data transfer needs                   |
@@ -49,17 +49,17 @@ This guide provides core concepts and resources for anyone who want to gain core
     | Cost            | Lower operational costs for inference    | Higher infrastructure costs for large models|
 
 ### Benefits of Edge AI
-- Reduced latency: Critical for real-time applications like autonomous vehicles and industrial automation.
-- Enhanced privacy and security: Sensitive data can be processed locally, reducing transmission risks.
-- Bandwidth optimization: Only relevant insights or aggregated data are sent to the cloud, saving costs.
-- Offline capabilities: Enables operation in environments with limited or no connectivity.
+- **Reduced latency**: Critical for real-time applications like autonomous vehicles and industrial automation.
+- **Enhanced privacy and security**: Sensitive data can be processed locally, reducing transmission risks.
+- **Bandwidth optimization**: Only relevant insights or aggregated data are sent to the cloud, saving costs.
+- **Offline capabilities**: Enables operation in environments with limited or no connectivity.
 - **Sustainability / Energy Efficiency:** Growing focus on minimizing power consumption at the edge.
 
 ### Challenges in Edge AI
-- Resource constraints: Limited compute, memory, and power budget on edge devices.
-- Model optimization: Compressing complex models without significant accuracy loss.
-- Power efficiency: Designing solutions for long battery life or minimal power draw.
-- Heterogeneous hardware: Developing solutions compatible with diverse chip architectures (CPUs, GPUs, FPGAs, ASICs, NPUs).
+- **Resource constraints**: Limited compute, memory, and power budget on edge devices.
+- **Model optimization**: Compressing complex models without significant accuracy loss.
+- **Power efficiency**: Designing solutions for long battery life or minimal power draw.
+- **Heterogeneous hardware**: Developing solutions compatible with diverse chip architectures (CPUs, GPUs, FPGAs, ASICs, NPUs).
 - **MLOps for Edge:** Managing the entire ML lifecycle (training, deployment, monitoring, updating) for distributed edge devices.
 - **Connectivity and Orchestration:** Managing vast numbers of devices and ensuring seamless edge-cloud interaction.
 
@@ -75,7 +75,7 @@ This guide provides core concepts and resources for anyone who want to gain core
 
 ### Edge AI Ecosystem
 - **Hardware:** Edge devices (microcontrollers, embedded systems, industrial PCs, smartphones), dedicated accelerators (NPUs, VPUs, custom ASICs).
-- **Software:** AI frameworks (TensorFlow Lite, PyTorch Mobile), optimization toolkits (OpenVINO, TensorRT), edge orchestration platforms, MLOps tools.
+- **Software:** AI frameworks (LiteRT (TensorFlow Lite), PyTorch Mobile), optimization toolkits (OpenVINO, TensorRT), edge orchestration platforms, MLOps tools.
 - **Cloud-edge integration:** Hybrid architectures, data synchronization, remote management.
 - **Connectivity:** 5G, Wi-Fi 6E, LPWAN technologies (LoRaWAN, NB-IoT).
 
@@ -115,17 +115,17 @@ graph TD
 ```mermaid
 graph TD
     subgraph Edge
-        D[Device 1 (Low Compute)] --> E{Edge Gateway (Mid Compute)};
-        F[Device 2 (Low Compute)] --> E;
+        D["Device 1 (Low Compute)"] --> E{"Edge Gateway (Mid Compute)"};
+        F["Device 2 (Low Compute)"] --> E;
     end
 
     subgraph Cloud
         C[Cloud Compute (High Compute)]
     end
 
-    E -- Data/Model Offload (High Latency/Complex Tasks) --> C;
-    C -- Model Updates / Retraining --> E;
-    E -- Local Inference (Low Latency/Simple Tasks) --> G[Local Action];
+    E -- "Data/Model Offload (High Latency/Complex Tasks)" --> C;
+    C -- "Model Updates / Retraining" --> E;
+    E -- "Local Inference (Low Latency/Simple Tasks)" --> G[Local Action];
 
     style D fill:#f9f,stroke:#333,stroke-width:2px
     style F fill:#f9f,stroke:#333,stroke-width:2px
@@ -138,7 +138,6 @@ graph TD
 - **Model Lifecycle Management:** Orchestrating model training (cloud), deployment (edge), monitoring (edge/cloud), and retraining (cloud).
 - **Service Mesh for Edge:** Extending service mesh concepts to manage communication and policies across distributed edge services.
 - **Dynamic Workload Shifting:** Automatically moving AI inference tasks between edge and cloud based on real-time conditions (network, device load, criticality).
-
 
 ## Edge AI MLOps
 MLOps for Edge AI extends traditional MLOps practices to address the unique challenges of distributed, resource-constrained environments.
@@ -184,6 +183,24 @@ MLOps for Edge AI extends traditional MLOps practices to address the unique chal
 
 ### Optimization Techniques
 
+```mermaid
+graph TD
+    A["Pre-trained Model (Cloud/Large)"] --> B{Optimization Techniques};
+    B --> C1["Quantization (e.g., FP32 to INT8)"];
+    B --> C2["Pruning (Structured/Unstructured)"];
+    B --> C3[Knowledge Distillation];
+    B --> C4["Neural Architecture Search (NAS)"];
+    B --> C5["Model Compression (e.g., Weight Sharing)"];
+    C1 --> D{Edge-Optimized Model};
+    C2 --> D;
+    C3 --> D;
+    C4 --> D;
+    C5 --> D;
+    D --> E["Hardware-Specific Compilation/Conversion (e.g., TFLite, ONNX, OpenVINO)"];
+    E --> F[Performance Evaluation & Benchmarking];
+    F --> G{Deploy to Edge Device};
+    F -- Iteration Needed --> A;
+```
 #### Quantization (SOTA: Post-Training Quantization (PTQ) and Quantization-Aware Training (QAT))
 - Post-training quantization: Reducing precision of a trained model (e.g., to INT8, INT4, binary) with minimal accuracy loss.
 - Quantization-aware training: Training a model with simulated quantization to achieve better performance post-quantization.
@@ -237,7 +254,7 @@ MLOps for Edge AI extends traditional MLOps practices to address the unique chal
 - **Adaptive Edge AI Modules (e.g., AMD Xilinx Kria K26 SOM):** Combining programmable logic with embedded processors for flexible vision and robotics solutions.
 
 #### ASIC Accelerators
-- Google Edge TPU: Specialized chip for TensorFlow Lite inference, known for high TOPS/Watt.
+- Google Edge TPU: Specialized chip for LiteRT (TensorFlow Lite) inference, known for high TOPS/Watt.
 - Intel Movidius VPU: Low-power vision processing units for AI inference.
 - Customized AI chips for edge devices (e.g., Hailo-8, Ambarella CVflow, various startups): Tailored for specific workloads like computer vision or audio processing, offering superior efficiency.
 
@@ -327,7 +344,6 @@ MLOps for Edge AI extends traditional MLOps practices to address the unique chal
 
 Federated Learning is a key approach to privacy-preserving AI at the edge.
 
-
 ```mermaid
 graph TD
     subgraph Central Server
@@ -335,18 +351,18 @@ graph TD
     end
 
     subgraph Edge Devices
-        D1[Device 1 (Local Data & Model)];
-        D2[Device 2 (Local Data & Model)];
-        Dn[Device N (Local Data & Model)];
+        D1["Device 1 (Local Data & Model)"];
+        D2["Device 2 (Local Data & Model)"];
+        Dn["Device N (Local Data & Model)"];
     end
 
-    D1 -- Local Training (No Raw Data Shared) --> L1[Local Model Updates];
-    D2 -- Local Training (No Raw Data Shared) --> L2[Local Model Updates];
-    Dn -- Local Training (No Raw Data Shared) --> Ln[Local Model Updates];
+    D1 -- "Local Training (No Raw Data Shared)" --> L1[Local Model Updates];
+    D2 -- "Local Training (No Raw Data Shared)" --> L2[Local Model Updates];
+    Dn -- "Local Training (No Raw Data Shared)" --> Ln[Local Model Updates];
 
-    L1 -- Secure Aggregation (Encrypted Updates) --> CS;
-    L2 -- Secure Aggregation (Encrypted Updates) --> CS;
-    Ln -- Secure Aggregation (Encrypted Updates) --> CS;
+    L1 -- "Secure Aggregation (Encrypted Updates)" --> CS;
+    L2 -- "Secure Aggregation (Encrypted Updates)" --> CS;
+    Ln -- "Secure Aggregation (Encrypted Updates)" --> CS;
 
     CS -- Updated Global Model --> D1;
     CS -- Updated Global Model --> D2;
@@ -385,13 +401,13 @@ graph TD
 
 ### Edge AI Frameworks & Toolkits
 
-#### TensorFlow Lite
+#### LiteRT (TensorFlow Lite)
 - Model conversion and optimization: Tools to convert TensorFlow models for edge deployment.
 - Delegate support for hardware acceleration: Leveraging specialized hardware (e.g., Edge TPU delegate).
 - On-device training capabilities: Limited but growing support for training or fine-tuning models directly on edge devices.
 - **TensorFlow Lite Micro:** Optimized for microcontrollers (TinyML).
 
-#### PyTorch Mobile
+#### ExecuTorch (PyTorch Mobile)
 - Model preparation for mobile deployment: Tools like TorchScript for serialization.
 - Quantization and pruning in PyTorch: Native support for optimization techniques.
 - Integration with mobile development frameworks: Easier integration into iOS/Android apps.
@@ -421,14 +437,14 @@ graph TD
 
 | Framework            | Primary Devices                     | Key Features                                   | Hardware Compatibility                  | MLOps Integration                           |
 |----------------------|-------------------------------------|------------------------------------------------|-----------------------------------------|---------------------------------------------|
-| **LiteRT (TensorFlow Lite)** | Mobile, Embedded, Microcontrollers  | Quantization, Delegates, On-device training   | Broad (CPU, GPU, Edge TPU, DSP)         | Good, integrated with TF ecosystem          |
-| **ExecuTorch (PyTorch Mobile)** | Mobile, Embedded                     | TorchScript, Quantization, Easy Dev Workflow   | Broad (CPU, GPU)                         | Growing, leverages PyTorch ecosystem        |
-| **ONNX Runtime** | Cross-platform (Edge, Cloud, Mobile)| Standard model format, various execution providers | Broad (CPU, GPU, VPU, NPU, FPGA)        | Good, interoperable with many tools         |
-| **OpenVINO** | Intel Hardware (CPU, GPU, VPU, FPGA)| Model Optimization, Inference Engine, CV focus | Intel-specific (high performance)       | Strong for Intel-centric solutions          |
-| **Edge Impulse** | Microcontrollers, IoT Devices       | End-to-end TinyML workflow, Data Management    | Microcontrollers, specific dev boards   | Excellent for embedded ML projects          |
-| **Apache TVM** | Diverse Hardware (Deep Customization)| Compiler-based optimization, Auto-tuning, Runtime | Highly Flexible (CPU, GPU, NPU, FPGA)   | Lower-level, requires more expertise         |
-| **NVIDIA TensorRT** | NVIDIA GPUs (Jetson series)         | High-performance inference, Graph optimization | NVIDIA GPU-specific (Jetson, etc.)      | Strong for NVIDIA-based deployments         |
-| **Qualcomm AIMET** | Mobile, Embedded, Edge Devices    | Quantization-aware training, Post-training quantization, Cross-layer equalization, BatchNorm folding | Qualcomm SoCs (Snapdragon), CPU, GPU, DSP     | Integrates with TensorFlow & PyTorch, supports deployment workflows       |
+| **[LiteRT (TensorFlow Lite)](https://github.com/google-ai-edge/LiteRT)** | Mobile, Embedded, Microcontrollers  | Quantization, Delegates, On-device training   | Broad (CPU, GPU, Edge TPU, DSP)         | Good, integrated with TF ecosystem          |
+| **[ExecuTorch (PyTorch Mobile)](https://github.com/pytorch/executorch)** | Mobile, Embedded                     | TorchScript, Quantization, Easy Dev Workflow   | Broad (CPU, GPU)                         | Growing, leverages PyTorch ecosystem        |
+| **[ONNX Runtime](https://github.com/microsoft/onnxruntime)** | Cross-platform (Edge, Cloud, Mobile)| Standard model format, various execution providers | Broad (CPU, GPU, VPU, NPU, FPGA)        | Good, interoperable with many tools         |
+| **[OpenVINO](https://github.com/openvinotoolkit/openvino)** | Intel Hardware (CPU, GPU, VPU, FPGA)| Model Optimization, Inference Engine, CV focus | Intel-specific (high performance)       | Strong for Intel-centric solutions          |
+| **[Edge Impulse](https://edgeimpulse.com/)** | Microcontrollers, IoT Devices       | End-to-end TinyML workflow, Data Management    | Microcontrollers, specific dev boards   | Excellent for embedded ML projects          |
+| **[Apache TVM](https://github.com/apache/tvm)** | Diverse Hardware (Deep Customization)| Compiler-based optimization, Auto-tuning, Runtime | Highly Flexible (CPU, GPU, NPU, FPGA)   | Lower-level, requires more expertise         |
+| **[NVIDIA TensorRT](https://developer.nvidia.com/tensorrt)** | NVIDIA GPUs (Jetson series)         | High-performance inference, Graph optimization | NVIDIA GPU-specific (Jetson, etc.)      | Strong for NVIDIA-based deployments         |
+| **[Qualcomm AIMET](https://github.com/quic/aimet)** | Mobile, Embedded, Edge Devices    | Quantization-aware training, Post-training quantization, Cross-layer equalization, BatchNorm folding | Qualcomm SoCs (Snapdragon), CPU, GPU, DSP     | Integrates with TensorFlow & PyTorch, supports deployment workflows       |
 
 - Further Reading: [Edge AI Frameworks core guides](https://github.com/afondiel/computer-science-notebook/tree/master/core/systems/edge-computing/edge-ai/concepts/frameworks)
 
@@ -449,24 +465,6 @@ graph TD
 - **Embedded AI Benchmarks (e.g., MLPerf Tiny):** Specifically for microcontrollers and deeply embedded systems.
 
 ### Performance Optimization Strategies
-```mermaid
-graph TD
-    A[Pre-trained Model (Cloud/Large)] --> B{Optimization Techniques};
-    B --> C1[Quantization (e.g., FP32 to INT8)];
-    B --> C2[Pruning (Structured/Unstructured)];
-    B --> C3[Knowledge Distillation];
-    B --> C4[Neural Architecture Search (NAS)];
-    B --> C5[Model Compression (e.g., Weight Sharing)];
-    C1 --> D{Edge-Optimized Model};
-    C2 --> D;
-    C3 --> D;
-    C4 --> D;
-    C5 --> D;
-    D --> E[Hardware-Specific Compilation/Conversion (e.g., TFLite, ONNX, OpenVINO)];
-    E --> F[Performance Evaluation & Benchmarking];
-    F --> G{Deploy to Edge Device};
-    F -- Iteration Needed --> A;
-```
 
 - Model architecture modifications: Choosing lightweight models or designing custom efficient architectures.
 - Quantization fine-tuning: Iterative refinement of quantization parameters.
@@ -529,11 +527,11 @@ graph TD
     - Top conferences: NeurIPS, ICML, CVPR, ICCV, ECCV, AAAI (search for "edge AI," "model compression," "federated learning").
     - ArXiv pre-prints on SOTA techniques.
 - **Open-Source Projects & Repositories:**
-    - TensorFlow Lite, PyTorch Mobile, ONNX Runtime, Apache TVM.
+    - LiteRT (TensorFlow Lite), PyTorch Mobile, ONNX Runtime, Apache TVM.
     - Edge Impulse, OpenVINO, NVIDIA Jetson repositories.
     - Repositories for specific lightweight models (e.g., MobileNet, EfficientNet, YOLO variants).
 - **Books & Technical Guides:**
-    - "TinyML: Machine Learning with TensorFlow Lite on Arduino and Ultra-Low-Power Microcontrollers" by Pete Warden and Daniel Situnayake.
+    - "TinyML: Machine Learning with LiteRT (TensorFlow Lite) on Arduino and Ultra-Low-Power Microcontrollers" by Pete Warden and Daniel Situnayake.
     - Books on MLOps and embedded systems.
 - **Industry Reports & Analyst Insights:**
     - Gartner, Forrester, IoT Analytics, IDC reports on Edge AI market trends and predictions.
