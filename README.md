@@ -120,7 +120,7 @@ graph TD
     end
 
     subgraph Cloud
-        C[Cloud Compute (High Compute)]
+        C["Cloud Compute (High Compute)"]
     end
 
     E -- "Data/Model Offload (High Latency/Complex Tasks)" --> C;
