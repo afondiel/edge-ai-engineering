@@ -1,12 +1,12 @@
 [![](https://img.shields.io/badge/Contribute-Welcome-green)](./CONTRIBUTING.md)
 
-# Edge AI Engineering: The Ultimate Technical Reference Guide
+# Edge AI Engineering: A Core Technical Guide
 
 ## Overview
 
 This guide provides core concepts and resources for anyone who want to gain core understanding on how to bring and Artificial Intelligence into resource-constrained hardware devices.
 
-> [!TIP] 
+> [!NOTE] 
 > It aims to be a living document, continuously updated with the latest State-of-the-Art (SOTA) breakthroughs and ongoing developments shaping the Edge AI landscape.
 
 ## Table of Contents
@@ -37,16 +37,18 @@ This guide provides core concepts and resources for anyone who want to gain core
 ## Introduction
 
 ### What is Edge AI?
-- Definition and core concepts: Processing AI workloads closer to the data source, minimizing reliance on centralized cloud infrastructure.
-- Comparison with cloud-based AI:
-    | **Feature**        | **Edge AI**                                  | **Cloud AI**                                   |
-    |-----------------|------------------------------------------|--------------------------------------------|
-    | Latency         | Ultra-low, real-time decisions           | Higher, dependent on network               |
-    | Bandwidth       | Optimized, less data sent to cloud       | High data transfer needs                   |
-    | Privacy/Security| Enhanced, data often stays local         | Data transferred, more exposure points     |
-    | Connectivity    | Offline capabilities, intermittent needs | Requires constant, stable connectivity     |
-    | Resource        | Resource-constrained (power, compute, memory) | Virtually unlimited resources             |
-    | Cost            | Lower operational costs for inference    | Higher infrastructure costs for large models|
+Definition and core concepts: Processing AI workloads closer to the data source, minimizing reliance on centralized cloud infrastructure.
+
+Comparison with cloud-based AI:
+
+| **Feature**        | **Edge AI**                                  | **Cloud AI**                                   |
+|-----------------|------------------------------------------|--------------------------------------------|
+| Latency         | Ultra-low, real-time decisions           | Higher, dependent on network               |
+| Bandwidth       | Optimized, less data sent to cloud       | High data transfer needs                   |
+| Privacy/Security| Enhanced, data often stays local         | Data transferred, more exposure points     |
+| Connectivity    | Offline capabilities, intermittent needs | Requires constant, stable connectivity     |
+| Resource        | Resource-constrained (power, compute, memory) | Virtually unlimited resources             |
+| Cost            | Lower operational costs for inference    | Higher infrastructure costs for large models|
 
 ### Benefits of Edge AI
 - **Reduced latency**: Critical for real-time applications like autonomous vehicles and industrial automation.
@@ -491,6 +493,7 @@ graph TD
 - Automated retraining and model updates: Triggering MLOps pipelines based on performance metrics or drift detection.
 
 ### Best Practices
+
 - Hardware-software co-design for optimal performance: Designing AI models and hardware in conjunction.
 - Balancing accuracy and efficiency trade-offs: Understanding where to compromise for practical deployment.
 - Scalability considerations for large-scale deployments: Designing systems that can grow with increasing device numbers.
@@ -520,30 +523,39 @@ graph TD
 
 *A curated list of essential resources for Edge AI Engineering.*
 
-- **Online Courses & Tutorials:**
-    - Edge AI courses from NVIDIA, Intel, Google (e.g., NVIDIA Deep Learning Institute, Google Coral documentation).
-    - Coursera, Udacity, edX courses on Embedded AI, TinyML.
-- **Key Research Papers & Publications:**
-    - Top conferences: NeurIPS, ICML, CVPR, ICCV, ECCV, AAAI (search for "edge AI," "model compression," "federated learning").
-    - ArXiv pre-prints on SOTA techniques.
-- **Open-Source Projects & Repositories:**
-    - LiteRT (TensorFlow Lite), PyTorch Mobile, ONNX Runtime, Apache TVM.
-    - Edge Impulse, OpenVINO, NVIDIA Jetson repositories.
-    - Repositories for specific lightweight models (e.g., MobileNet, EfficientNet, YOLO variants).
-- **Books & Technical Guides:**
-    - "TinyML: Machine Learning with LiteRT (TensorFlow Lite) on Arduino and Ultra-Low-Power Microcontrollers" by Pete Warden and Daniel Situnayake.
-    - Books on MLOps and embedded systems.
-- **Industry Reports & Analyst Insights:**
-    - Gartner, Forrester, IoT Analytics, IDC reports on Edge AI market trends and predictions.
-- **Community Forums & Blogs:**
-    - Specific forums for NVIDIA Jetson, Google Coral, Edge Impulse.
-    - Blogs from major tech companies (Intel, ARM, Qualcomm) and AI research labs.
+### **Online Courses & Tutorials:**
 
+- Edge AI courses from NVIDIA, Intel, Google (e.g., NVIDIA Deep Learning Institute, Google Coral documentation).
+- Coursera, Udacity, edX courses on Embedded AI, TinyML.
 
-### Contributing
+### **Key Research Papers & Publications:**
+
+- Top conferences: NeurIPS, ICML, CVPR, ICCV, ECCV, AAAI (search for "edge AI," "model compression," "federated learning").
+- ArXiv pre-prints on SOTA techniques.
+
+### **Open-Source Projects & Repositories:**
+
+- LiteRT (TensorFlow Lite), PyTorch Mobile, ONNX Runtime, Apache TVM.
+- Edge Impulse, OpenVINO, NVIDIA Jetson repositories.
+- Repositories for specific lightweight models (e.g., MobileNet, EfficientNet, YOLO variants).
+
+### **Books & Technical Guides:**
+
+- "TinyML: Machine Learning with LiteRT (TensorFlow Lite) on Arduino and Ultra-Low-Power Microcontrollers" by Pete Warden and Daniel Situnayake.
+- Books on MLOps and embedded systems.
+
+### **Industry Reports & Analyst Insights:**
+
+- Gartner, Forrester, IoT Analytics, IDC reports on Edge AI market trends and predictions.
+
+### **Community Forums & Blogs:**
+- Specific forums for NVIDIA Jetson, Google Coral, Edge Impulse.
+- Blogs from major tech companies (Intel, ARM, Qualcomm) and AI research labs.
+
+## Contributing
 
 We welcome contributions from the community! Your expertise helps make this the ultimate guide for Edge AI Engineering. Please see our [CONTRIBUTING.md](CONTRIBUTING.md) file for details on how to submit improvements, suggest new sections, or report issues.
 
-### License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
