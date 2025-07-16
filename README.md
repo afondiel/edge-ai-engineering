@@ -7,7 +7,7 @@
 This guide provides core concepts and resources for anyone interested in gaining fundamental understanding on how to "bring" intelligence into resource-constrained devices.
 
 > [!NOTE] 
-> It aims to be a living document, continuously updated with the latest State-of-the-Art (SOTA) breakthroughs and ongoing developments shaping the Edge AI landscape.
+> It aims to be a living document, constantly updated with the latest SOTA breakthroughs and developments in Edge AI ecosystem.
 
 ## Table of Contents
 
