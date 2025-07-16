@@ -1,10 +1,10 @@
 [![](https://img.shields.io/badge/Contribute-Welcome-green)](./CONTRIBUTING.md)
 
-# Edge AI Engineering: A Core Technical Guide
+# Edge AI Engineering: A Core Reference Guide
 
 ## Overview
 
-This guide provides core concepts and resources for anyone who want to gain core understanding on how to bring and Artificial Intelligence into resource-constrained hardware devices.
+This guide provides core concepts and resources for anyone interested in gaining fundamental understanding on how to "bring" intelligence into resource-constrained devices.
 
 > [!NOTE] 
 > It aims to be a living document, continuously updated with the latest State-of-the-Art (SOTA) breakthroughs and ongoing developments shaping the Edge AI landscape.
