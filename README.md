@@ -98,10 +98,11 @@ Comparison with cloud-based AI:
 
 ```mermaid
 graph TD
-    A[Raw Data Collection: Sensors, Cameras] --> B{Edge Device Pre-processing};
-    B --> C{Optimized AI Model Inference};
+    A[Raw Data Collection: Sensors, Cameras] --> B[Edge Device Pre-processing]
+    B --> B1[Efficient AI Modeling];
+    B1 --> C[Optimized AI Model Inference];
     C --> D[Local Action / Real-Time Decision];
-    C --> E{Aggregated Insights / Filtered Data};
+    C --> E[Aggregated Insights / Filtered Data];
     E --(Optional)--> F[Cloud for Training/Analytics];
     F --(Model Updates)--> C;
 ```
