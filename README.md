@@ -4,7 +4,7 @@
 
 ## Overview
 
-This guide provides core concepts and resources for anyone interested in gaining fundamental understanding on how to "bring" intelligence into resource-constrained devices.
+This guide provides core concepts and resources for anyone who wants to **dive** into the fundamentals of **edge AI engineering** and learn how to bring intelligence to resource-constrained devices.
 
 > [!NOTE] 
 > This guide aims to be a living document, constantly updated with the latest SOTA breakthroughs and developments in Edge AI ecosystem.
