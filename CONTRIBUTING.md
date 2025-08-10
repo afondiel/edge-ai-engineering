@@ -17,7 +17,7 @@ We welcome all kinds of contributions, including:
 1.  **Fork the Repository:** Head over to the [main repo](https://github.com/afondiel/edge-ai-engineering) and click "Fork."
 2.  **Clone Your Fork:**
     ```bash
-    git clone https://github.com/your_username/edge-ai-engineering.git
+    git clone https://github.com/yourusername/edge-ai-engineering.git
     cd edge-ai-engineering
     ```
 
