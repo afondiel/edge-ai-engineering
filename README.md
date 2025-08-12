@@ -1,38 +1,39 @@
 [![](https://img.shields.io/badge/Contribute-Welcome-green)](./CONTRIBUTING.md)
 
-# Edge AI Engineering: A Core Reference Guide
+# Edge AI Engineering: A Practical Guide
 
 ## Overview
 
-This guide provides core concepts and resources for anyone who wants to **dive** into the fundamentals of **edge AI engineering** and learn how to bring intelligence to resource-constrained devices.
+This guide provides a practical framework for understanding the fundamentals of **Edge AI Engineering**. It covers concepts, tools and techniques for designing efficient, reliable and scalable real-world AI applications for resource-constrained devices.
 
-> [!NOTE] 
-> This guide aims to be a living document, constantly updated with the latest SOTA breakthroughs and developments in Edge AI ecosystem.
-
-## Table of Contents
+<details>
+    <summary>
+    <b>Table of Contents</b>
+    </summary>
 
 - [Introduction](#introduction)
-  - [What is Edge AI?](#what-is-edge-ai)
-  - [Benefits of Edge AI](#benefits-of-edge-ai)
-  - [Challenges in Edge AI](#challenges-in-edge-ai)
-  - [Key Industries and Applications](#key-industries-and-applications)
-  - [Edge AI Ecosystem](#edge-ai-ecosystem)
-  - [Future Trends](#future-trends)
+    - [What is Edge AI?](#what-is-edge-ai)
+    - [Benefits of Edge AI](#benefits-of-edge-ai)
+    - [Challenges in Edge AI](#challenges-in-edge-ai)
+    - [Key Industries and Applications](#key-industries-and-applications)
+    - [Edge AI Ecosystem](#edge-ai-ecosystem)
+    - [Future Trends](#future-trends)
 - [End-to-End Edge AI Stack](#end-to-end-edge-ai-stack)
-  - [Architectural Patterns](#architectural-patterns)
-  - [Edge-Cloud Continuum](#edge-cloud-continuum)
+    - [Architectural Patterns](#architectural-patterns)
+    - [Edge-Cloud Continuum](#edge-cloud-continuum)
 - [Edge AI MLOps](#edge-ai-mlops)
-   - [Real-Time Processing](#real-time-processing)
-   - [Optimization Techniques](#optimization-techniques)
-   - [Hardware Acceleration](#hardware-acceleration)
-   - [Edge Deployment Strategies](#edge-deployment-strategies)
-   - [Privacy and Security](#privacy-and-security)
+    - [Real-Time Processing](#real-time-processing)
+    - [Optimization Techniques](#optimization-techniques)
+    - [Hardware Acceleration](#hardware-acceleration)
+    - [Edge Deployment Strategies](#edge-deployment-strategies)
+    - [Privacy and Security](#privacy-and-security)
 - [Edge AI Frameworks & Toolkits](#edge-ai-frameworks--toolkits)
 - [Performance Benchmarking](#performance-benchmarking)
 - [Final Considerations](#final-considerations)
 - [Resources](#resources)
 - [Contributing](#contributing)
 - [License](#license)
+</details>
 
 ## Introduction
 
